@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<title>ჩატვირთვის ინდიკატორი</title>
+<style>
+  /* ჩატვირთვის ფოტოს სტილი */
+  #loadingImage {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+</style>
+</head>
+<body>
+
+<!-- ჩატვირთვის ფოტო -->
+<img id="loadingImage" src="assets/child-making-robot-close-up_23-2148863373.jpg" alt="ჩატვირთვა...">
+
+<script>
+// ეს ფუნქცია გამოიძახება, როდესაც საიტი ჩაიტვირთება
+window.onload = function() {
+  // წაშლის ფოტოს ჩატვირთვის დროს
+  document.getElementById('loadingImage').style.display = 'none';
+  
+};
+
+document.getElementById('loadingImage').style.display = 'block';
+setTimeout(function() {
+  document.getElementById('loadingImage').style.display = 'none';
+}, 3000);
+</script>
+
+</body>
+</html>
